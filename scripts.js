@@ -26,7 +26,7 @@ restartButton.addEventListener("click", restartGame);
 function guessNumber(e) {
   //prevents the button from submitting
   e.preventDefault();
-  //highlighting the hints spans according to the input number
+  //highlighting the hint spans according to the input number
   if (Number(guessInput.value) > randomNumber) {
     higherSpan.classList.remove("span-wrong");
     lowerSpan.classList.add("span-wrong");
