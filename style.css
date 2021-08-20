@@ -1,0 +1,211 @@
+/* imports */
+
+@import url("https://fonts.googleapis.com/css2?family=Qahiri&display=swap");
+
+/* resets */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  height: 100vh;
+  font-family: "Qahiri", sans-serif;
+}
+
+/* hiding the arrows of the input */
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+/* layout */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 20vh;
+  margin: auto 2rem;
+}
+
+.section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 30vh;
+}
+
+.main {
+  display: flex;
+  flex-wrap: wrap;
+  height: 50vh;
+}
+
+.left {
+  flex: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.right {
+  flex: 50%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: 2rem;
+}
+
+@media only screen and (max-width: 567px) {
+  .menu {
+    margin-right: 2rem;
+  }
+}
+
+/* styling */
+
+.guessing-number {
+  color: white;
+  background-color: black;
+  text-align: center;
+  padding: 2rem;
+  font-size: 5rem;
+  width: 15rem;
+  border-radius: 4rem;
+}
+
+@media only screen and (max-width: 567px) {
+  .guessing-number {
+    margin-bottom: 2rem;
+    padding: 1rem;
+    font-size: 3rem;
+  }
+}
+
+.title {
+  margin: 0 auto auto auto;
+  font-size: 10rem;
+}
+
+@media only screen and (max-width: 567px) {
+  .title {
+    font-size: 4rem;
+    margin-bottom: 2rem;
+  }
+}
+
+input {
+  height: 5rem;
+  margin-bottom: 2rem;
+}
+
+.menu-span {
+  margin: 1rem auto;
+  padding: 1rem;
+  font-size: 4rem;
+  border: 0.1rem solid black;
+  width: 25rem;
+  text-align: center;
+}
+
+@media only screen and (max-width: 567px) {
+  .menu-span {
+    font-size: 2.5rem;
+    width: 15rem;
+  }
+}
+
+.span-wrong {
+  color: white;
+  background-color: #e3170a;
+}
+
+.span-correct {
+  background-color: white;
+}
+
+.lives {
+  font-size: 5rem;
+}
+
+@media only screen and (max-width: 567px) {
+  .lives {
+    margin-left: 2rem;
+    font-size: 3rem;
+  }
+}
+
+.hint {
+  font-size: 4rem;
+  text-decoration: underline;
+}
+
+@media only screen and (max-width: 567px) {
+  .hint {
+    font-size: 2rem;
+  }
+}
+
+.message {
+  font-size: 5rem;
+  margin-top: 2rem;
+}
+
+@media only screen and (max-width: 567px) {
+  .message {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+  }
+}
+
+button {
+  color: white;
+  background-color: black;
+  padding: 1.5rem;
+  font-size: 4rem;
+  font-family: "Qahiri", sans-serif;
+  border-radius: 4rem;
+  width: 15rem;
+  transition: 0.5s;
+}
+
+@media only screen and (max-width: 567px) {
+  button {
+    padding: 0.5rem;
+    font-size: 2rem;
+  }
+}
+
+button:hover {
+  background-color: white;
+  color: black;
+}
+
+input {
+  width: 15rem;
+  border: 0.25rem solid black;
+  text-align: center;
+}
