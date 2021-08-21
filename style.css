@@ -1,6 +1,6 @@
 /* imports */
 
-@import url("https://fonts.googleapis.com/css2?family=Qahiri&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rampart+One&display=swap");
 
 /* resets */
 
@@ -16,10 +16,38 @@ html {
 
 body {
   height: 100vh;
-  font-family: "Qahiri", sans-serif;
+  font-family: "Rampart One", cursive !important;
+  color: black;
 }
 
-/* hiding the arrows of the input */
+/* styling */
+
+.hint {
+  border-bottom: solid 0.25rem black;
+}
+
+.lives {
+  border-bottom: solid 0.25rem black;
+}
+
+.menu-span {
+  border: solid 0.25rem black;
+  width: 20rem;
+  text-align: center;
+}
+
+.guess-value {
+  width: 25rem;
+  height: 5rem;
+  font-size: 3rem;
+  text-align: center;
+}
+
+.guessing-number {
+  color: white;
+}
+
+/* removing the arrows from the number input */
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
@@ -29,183 +57,4 @@ input::-webkit-inner-spin-button {
 
 input[type="number"] {
   -moz-appearance: textfield;
-}
-
-/* layout */
-
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 20vh;
-  margin: auto 2rem;
-}
-
-.section {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  height: 30vh;
-}
-
-.main {
-  display: flex;
-  flex-wrap: wrap;
-  height: 50vh;
-}
-
-.left {
-  flex: 50%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.right {
-  flex: 50%;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-}
-
-.menu {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-left: 2rem;
-}
-
-@media only screen and (max-width: 567px) {
-  .menu {
-    margin-right: 2rem;
-  }
-}
-
-/* styling */
-
-.guessing-number {
-  color: white;
-  background-color: black;
-  text-align: center;
-  padding: 2rem;
-  font-size: 5rem;
-  width: 15rem;
-  border-radius: 4rem;
-}
-
-@media only screen and (max-width: 567px) {
-  .guessing-number {
-    margin-bottom: 2rem;
-    padding: 1rem;
-    font-size: 3rem;
-  }
-}
-
-.title {
-  margin: 0 auto auto auto;
-  font-size: 10rem;
-}
-
-@media only screen and (max-width: 567px) {
-  .title {
-    font-size: 4rem;
-    margin-bottom: 2rem;
-  }
-}
-
-input {
-  height: 5rem;
-  margin-bottom: 2rem;
-}
-
-.menu-span {
-  margin: 1rem auto;
-  padding: 1rem;
-  font-size: 4rem;
-  border: 0.1rem solid black;
-  width: 25rem;
-  text-align: center;
-}
-
-@media only screen and (max-width: 567px) {
-  .menu-span {
-    font-size: 2.5rem;
-    width: 15rem;
-  }
-}
-
-.span-wrong {
-  color: white;
-  background-color: #e3170a;
-}
-
-.span-correct {
-  background-color: white;
-}
-
-.lives {
-  font-size: 5rem;
-}
-
-@media only screen and (max-width: 567px) {
-  .lives {
-    margin-left: 2rem;
-    font-size: 3rem;
-  }
-}
-
-.hint {
-  font-size: 4rem;
-  text-decoration: underline;
-}
-
-@media only screen and (max-width: 567px) {
-  .hint {
-    font-size: 2rem;
-  }
-}
-
-.message {
-  font-size: 5rem;
-  margin-top: 2rem;
-}
-
-@media only screen and (max-width: 567px) {
-  .message {
-    font-size: 3rem;
-    margin-bottom: 2rem;
-  }
-}
-
-button {
-  color: white;
-  background-color: black;
-  padding: 1.5rem;
-  font-size: 4rem;
-  font-family: "Qahiri", sans-serif;
-  border-radius: 4rem;
-  width: 15rem;
-  transition: 0.5s;
-}
-
-@media only screen and (max-width: 567px) {
-  button {
-    padding: 0.5rem;
-    font-size: 2rem;
-  }
-}
-
-button:hover {
-  background-color: white;
-  color: black;
-}
-
-input {
-  width: 15rem;
-  border: 0.25rem solid black;
-  text-align: center;
 }

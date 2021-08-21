@@ -12,7 +12,7 @@ const lowerSpan = document.querySelector(".lower");
 
 /* inicial values */
 
-let randomNumber = Math.floor(Math.random() * 20);
+let randomNumber = Math.floor(Math.random() * 10);
 let livesValue = 5;
 lives.innerHTML = `Lives: ${livesValue}`;
 
@@ -28,36 +28,34 @@ function guessNumber(e) {
   e.preventDefault();
   //highlighting the hint spans according to the input number
   if (Number(guessInput.value) > randomNumber) {
-    higherSpan.classList.remove("span-wrong");
-    lowerSpan.classList.add("span-wrong");
+    higherSpan.classList.remove("bg-secondary");
+    lowerSpan.classList.add("bg-secondary");
     livesValue = livesValue - 1;
     lives.innerHTML = `Lives: ${livesValue}`;
     message.innerHTML = `Your last guess was ${guessInput.value}`;
     guessInput.value = "";
   } else if (Number(guessInput.value) < randomNumber) {
-    lowerSpan.classList.remove("span-wrong");
-    higherSpan.classList.add("span-wrong");
+    lowerSpan.classList.remove("bg-secondary");
+    higherSpan.classList.add("bg-secondary");
     livesValue = livesValue - 1;
     lives.innerHTML = `Lives: ${livesValue}`;
     message.innerHTML = `Your last guess was ${guessInput.value}`;
     guessInput.value = "";
   } else {
-    higherSpan.classList.remove("span-wrong");
-    lowerSpan.classList.remove("span-wrong");
-    correctSpan.classList.add("span-correct");
+    higherSpan.classList.remove("bg-secondary");
+    lowerSpan.classList.remove("bg-secondary");
+    correctSpan.classList.add("bg-secondary");
     guessingNumber.innerHTML = `${randomNumber}`;
     lives.innerHTML = `Lives: ${livesValue}`;
     guessInput.value = "";
     guessInput.disabled = true;
     tryButton.disabled = true;
-    document.body.style.backgroundColor = "#439C43";
     message.innerHTML = "Congratulations, you guessed it!";
   }
   //lose screen
   if (livesValue == 0) {
-    document.body.style.backgroundColor = "#e3170a";
-    higherSpan.classList.remove("span-wrong");
-    lowerSpan.classList.remove("span-wrong");
+    higherSpan.classList.remove("bg-secondary");
+    lowerSpan.classList.remove("bg-secondary");
     guessInput.disabled = true;
     tryButton.disabled = true;
     message.innerHTML = "Ops, you failed! Try again.";
@@ -68,13 +66,13 @@ function restartGame(e) {
   //prevents the button from submitting
   e.preventDefault();
   //resets everything
-  higherSpan.classList.remove("span-wrong");
-  lowerSpan.classList.remove("span-wrong");
-  correctSpan.classList.remove("span-correct");
-  randomNumber = Math.floor(Math.random() * 20);
+  higherSpan.classList.remove("bg-secondary");
+  lowerSpan.classList.remove("bg-secondary");
+  correctSpan.classList.remove("bg-secondary");
+  message.classList.remove("bg-danger");
+  randomNumber = Math.floor(Math.random() * 10);
   livesValue = 5;
   lives.innerHTML = `Lives: ${livesValue}`;
-  document.body.style.backgroundColor = "white";
   guessingNumber.innerHTML = `?`;
   guessInput.disabled = false;
   tryButton.disabled = false;

@@ -1,38 +1,82 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Guess the Number</title>
     <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="node_modules\bootstrap\dist\css\bootstrap.css"
+    />
   </head>
   <body>
-    <div class="header">
-      <button type="submit" class="restart-button">Try Again!</button>
-      <p class="hint">Hint: Between 0 and 20</p>
-    </div>
-
-    <div class="section">
-      <h2 class="title">Guess The Number</h2>
-      <div class="guessing-number">?</div>
-      <div class="message"></div>
-    </div>
-
-    <div class="main">
-      <div class="left">
-        <input type="number" class="guess-value" />
-        <button type="submit" class="try-button">Guess!</button>
-      </div>
-      <div class="right">
-        <p class="lives"></p>
-        <div class="menu">
-          <span class="higher menu-span">It's Higher</span>
-          <span class="correct menu-span">Correct!</span>
-          <span class="lower menu-span">It's Lower</span>
+    <div class="container">
+      <div class="row my-3">
+        <div class="col d-flex justify-content-start align-items-center">
+          <button type="submit" class="restart-button btn btn-lg btn-dark p-5">
+            <h3 class="display-5">Restart</h3>
+          </button>
+        </div>
+        <div class="col d-flex justify-content-end align-items-center p-2">
+          <h3 class="hint text-center pb-1">Hint: Between 0 and 10</h3>
         </div>
       </div>
     </div>
+    <div class="container">
+      <div class="row my-5">
+        <div
+          class="
+            col
+            d-flex
+            flex-column
+            justify-content-center
+            align-items-center
+          "
+        >
+          <h1 class="title display-1 mb-5">Guess The Number</h1>
+          <div class="guessing-number display-2 mb-5 bg-dark py-3 px-5">?</div>
+          <div class="message display-5"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row my-5">
+        <div
+          class="
+            col-md-6
+            d-flex
+            flex-column
+            justify-content-center
+            align-items-center
+          "
+        >
+          <input type="number" class="guess-value" />
+          <button type="submit" class="try-button btn btn-lg btn-dark my-5 p-5">
+            <h3 class="display-5">Guess!</h3>
+          </button>
+        </div>
+        <div
+          class="
+            col-md-4
+            d-flex
+            flex-column
+            justify-content-center
+            align-items-center
+          "
+        >
+          <span class="higher menu-span display-5 mb-3 py-1">It's Higher</span>
+          <span class="correct menu-span display-5 mb-3 py-1">Correct!</span>
+          <span class="lower menu-span display-5 py-1 mb-5">It's Lower</span>
+        </div>
+        <div class="col-md-2 d-flex justify-content-center align-items-center">
+          <p class="lives display-5 pb-1"></p>
+        </div>
+      </div>
+    </div>
+    <script src="node_modules\bootstrap\dist\js\bootstrap.js"></script>
     <script src="scripts.js"></script>
   </body>
 </html>
